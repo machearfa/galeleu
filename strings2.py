@@ -1,0 +1,1 @@
+texto = "esse é o meu texto AfJjfkKl OnIcjOe e Eou OUe ViNee NãoOOOo ResPiRRoU Ee FeiSZ 32 AnOs AaAASDA@@@@"
