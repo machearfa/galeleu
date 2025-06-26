@@ -1,4 +1,4 @@
-frase = '                                 viNiMNpN é NuUbi NUO RubÇolG'
+frase = '                              viNiMNpN é NuUbi NUO RubÇolG'
 
 #metodo .strip(), exclui os espaços iniciais e os finais
 print(frase.strip().replace('viNiMNpN', 'vinicius').replace('NuUbi', 'noob').replace('NUO', 'no').replace('RubÇolG', 'roblox'))
