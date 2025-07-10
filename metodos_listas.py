@@ -24,3 +24,8 @@ lista_frutas2 = ['banana', 'maçã', 'morango', 'banana', 'banana']
 
 print(lista_frutas2.count('banana'))
 print(lista_frutas2)
+
+# mamatche --------------------------------                    --------------------------------
+
+listaDaLição = ['mamatche', 'abujabu', 'maché']
+print(len(listaDaLição))
