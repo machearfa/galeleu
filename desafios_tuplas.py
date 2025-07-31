@@ -5,9 +5,15 @@ estoque = (
     ('webcam HD', 0)
 )
 
-for i in estoque:
-    if i[1] <= 5:
-        print('os numeros menores que 5 são:')
+print('produtos com menos de 5 unidades em estoque')
+contador = 0
+soma = 0
+for i in estoque: # para i (variavel) no estoque (tupla) fazer isso
+    if i[1] < 5: #printa os numeros menores que 1
         print(f'-{i[0]}')
-media = sum(i) / len(i)
-print(media)
+    if i[1] == 0:
+        contador += 1
+    
+    soma += i[1]#soma cada item da tupla estoque
+
+print('-'*50, f'a soma dos produtos é {soma}', '-'*50)
