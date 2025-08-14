@@ -8,46 +8,30 @@ pedidos = [
     ("Jaqueta", "Vestuário", 139.90, "Cancelado"),
 ]
 
+
+
 valores_entregues = []
 ultimos_3_pedidos = []
 contador = 0
-categoria = input('digite uma categoria para pesquisar: ')
 
+print("prod. entregues")
 for i in pedidos:
-
     if i[3] == 'Entregue':
-        print(f'- {i[0]}')
+        valores_entregues.append(i[2])
+        print(f' {i[0].center(40, '-')}')
 
-    valores_entregues.append(i[2])
+print()
+print('valor total dos entregues', sum(valores_entregues))
 
-    if valores_entregues:
-        soma_dos_valores = sum(valores_entregues) / len(valores_entregues)
+if i[1] == 'Vestuário' and i[-1] == 'Cancelado':
+    contador += 1 
+    print()
+    print('produtos da categoria vestuario cancelados: ',contador)
+    print()
+categoria_para_filtrar = input('digite uma categoria para filtrar :')
 
-    if i[3] == 'Cancelado':
-        print()
-        contador += 1
-        print(f'pedidos cancelados: {contador}')
 
-if categoria == 'Vestuário':
-    print(i[0])
-
-if categoria == 'Calçados':
-    print(i[0])
-
-if categoria == 'Ouvido':
-    print(i[0])
-
-if categoria == 'Eletrônicos':
-    print(i[0])
-
-ultimos_3_pedidos.append('meia')
-ultimos_3_pedidos.append('notebook')
-ultimos_3_pedidos.append('jaqueta')
-
-print() #pulei uma linha
-
-print(f'valor total dos entregues: {soma_dos_valores:.3f}')
-
-print() #pulei uma linha
-
-print(f'ultimos 3 pedidos: {ultimos_3_pedidos}') 
+print('pedidos da categoria', categoria_para_filtrar)
+for item in pedidos:
+    if categoria_para_filtrar.lower() == item[1].lower():
+        print(f'- {item[0]}')
